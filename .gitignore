@@ -6,6 +6,8 @@
 *.lo
 *.o
 *.obj
+/.vs/
+/compiles/
 
 # Precompiled Headers
 *.gch
@@ -24,7 +26,6 @@
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.exe
