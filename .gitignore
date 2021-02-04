@@ -6,8 +6,8 @@
 *.lo
 *.o
 *.obj
-/.vs/
-/compiles/
+\.vs\
+\compiles\
 
 # Precompiled Headers
 *.gch
