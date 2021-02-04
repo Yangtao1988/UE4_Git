@@ -23,6 +23,18 @@
     <ClCompile Include="..\..\share\ShareFunction.cpp">
       <Filter>share</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\engine\IOPool.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\engine\TcpServer.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\engine\TcpServer_Thread.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\engine\TcpServer_Funs.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="share">
@@ -57,5 +69,14 @@
     <ClInclude Include="..\..\engine\IContainer.h">
       <Filter>engine</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\engine\IOPool.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\engine\TcpServer.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\exe\config_server.xml" />
   </ItemGroup>
 </Project>

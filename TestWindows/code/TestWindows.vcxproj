@@ -145,6 +145,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\engine\INetbase.cpp" />
+    <ClCompile Include="..\..\engine\IOPool.cpp" />
+    <ClCompile Include="..\..\engine\TcpServer.cpp" />
+    <ClCompile Include="..\..\engine\TcpServer_Funs.cpp" />
+    <ClCompile Include="..\..\engine\TcpServer_Thread.cpp" />
     <ClCompile Include="..\..\share\ShareFunction.cpp" />
     <ClCompile Include="..\..\share\tinyxml\md5.cpp" />
     <ClCompile Include="..\..\share\tinyxml\tinystr.cpp" />
@@ -157,10 +161,15 @@
     <ClInclude Include="..\..\engine\IContainer.h" />
     <ClInclude Include="..\..\engine\IDefine.h" />
     <ClInclude Include="..\..\engine\INetbase.h" />
+    <ClInclude Include="..\..\engine\IOPool.h" />
+    <ClInclude Include="..\..\engine\TcpServer.h" />
     <ClInclude Include="..\..\share\ShareFunction.h" />
     <ClInclude Include="..\..\share\tinyxml\md5.h" />
     <ClInclude Include="..\..\share\tinyxml\tinystr.h" />
     <ClInclude Include="..\..\share\tinyxml\tinyxml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\exe\config_server.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
