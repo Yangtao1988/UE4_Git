@@ -17,6 +17,12 @@
     <ClCompile Include="..\..\share\tinyxml\tinyxmlparser.cpp">
       <Filter>share\tinyxml</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\engine\INetbase.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\share\ShareFunction.cpp">
+      <Filter>share</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="share">
@@ -40,6 +46,15 @@
       <Filter>share\tinyxml</Filter>
     </ClInclude>
     <ClInclude Include="..\..\engine\IDefine.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\engine\INetbase.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\share\ShareFunction.h">
+      <Filter>share</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\engine\IContainer.h">
       <Filter>engine</Filter>
     </ClInclude>
   </ItemGroup>

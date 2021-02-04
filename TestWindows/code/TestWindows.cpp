@@ -1,6 +1,12 @@
 ﻿#include <iostream>
+#include "../../share/ShareFunction.h"
+#include <Windows.h>
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    share::InitData();
+    Sleep(10000);
+
 }
