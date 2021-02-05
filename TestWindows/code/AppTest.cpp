@@ -27,8 +27,8 @@ namespace app
 		ts->read(c->ID, index);
 		ts->read(c->ID, &ttdata, sizeof(testdata));
 
-		LOG_MSG("AppTest data:%d-- id:%d/job:%d  arr:%d/%d/%d  \n",
-				index, ttdata.curtime,ttdata.job,ttdata.aa[0],ttdata.aa[33],ttdata.aa[99]);
+		//LOG_MSG("AppTest data:%d-- id:%d/job:%d  arr:%d/%d/%d  \n",
+				//index, ttdata.curtime,ttdata.job,ttdata.aa[0],ttdata.aa[33],ttdata.aa[99]);
 
 
 		ts->begin(c->ID, 1000);

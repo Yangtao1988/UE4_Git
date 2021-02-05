@@ -95,9 +95,9 @@ namespace app
 			ttdata.curtime = tp.time;
 			ttdata.job = tp.millitm;
 #endif
-			ttdata.aa[0] = 99;
-			ttdata.aa[33] = 122;
-			ttdata.aa[99] = 250;
+			ttdata.aa[0] = 1;
+			ttdata.aa[33] = 3;
+			ttdata.aa[99] = 9;
 
 			c->begin(1000);
 			c->sss(i);

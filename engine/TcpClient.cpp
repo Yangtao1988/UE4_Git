@@ -178,7 +178,7 @@ namespace net
 				m_data.state = func::C_Connect;
 				//LOG_MSG("--------------client connect success2...%d-%d\n", m_data.serverID, m_data.port);
 				if (onAcceptEvent != nullptr)  onAcceptEvent(this, 2);
-				return true;				//ÔÝÊ±ÎÞ£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡
+				return true;
 			}
 #else
 			//LOG_MSG("connect socket error:%d \n", errno);

@@ -69,7 +69,7 @@ namespace app
 		{
 			onUpdate();
 #ifdef ____WIN32_
-			Sleep(2);
+			Sleep(1);
 #else
 			usleep(2000);
 #endif // ____WIN32_

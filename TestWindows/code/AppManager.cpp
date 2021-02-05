@@ -69,7 +69,7 @@ namespace app
 		while (true)
 		{
 			onUpdate();
-			Sleep(10);
+			Sleep(1);
 		}
 	}
 
