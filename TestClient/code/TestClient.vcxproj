@@ -144,14 +144,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\engine\INetbase.cpp" />
-    <ClCompile Include="..\..\engine\IOPool.cpp" />
-    <ClCompile Include="..\..\engine\TcpClient.cpp" />
-    <ClCompile Include="..\..\engine\TcpClient_Funs.cpp" />
-    <ClCompile Include="..\..\engine\TcpClient_Thread.cpp" />
-    <ClCompile Include="..\..\engine\TcpServer.cpp" />
-    <ClCompile Include="..\..\engine\TcpServer_Funs.cpp" />
-    <ClCompile Include="..\..\engine\TcpServer_Thread.cpp" />
     <ClCompile Include="..\..\share\ShareFunction.cpp" />
     <ClCompile Include="..\..\share\tinyxml\md5.cpp" />
     <ClCompile Include="..\..\share\tinyxml\tinystr.cpp" />
@@ -167,9 +159,6 @@
     <ClInclude Include="..\..\engine\IContainer.h" />
     <ClInclude Include="..\..\engine\IDefine.h" />
     <ClInclude Include="..\..\engine\INetbase.h" />
-    <ClInclude Include="..\..\engine\IOPool.h" />
-    <ClInclude Include="..\..\engine\TcpClient.h" />
-    <ClInclude Include="..\..\engine\TcpServer.h" />
     <ClInclude Include="..\..\share\ShareFunction.h" />
     <ClInclude Include="..\..\share\tinyxml\md5.h" />
     <ClInclude Include="..\..\share\tinyxml\tinystr.h" />

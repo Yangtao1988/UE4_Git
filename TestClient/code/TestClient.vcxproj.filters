@@ -17,23 +17,8 @@
     <ClCompile Include="..\..\share\tinyxml\tinyxmlparser.cpp">
       <Filter>share\tinyxml</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\engine\INetbase.cpp">
-      <Filter>engine</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\share\ShareFunction.cpp">
       <Filter>share</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\engine\IOPool.cpp">
-      <Filter>engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\engine\TcpServer.cpp">
-      <Filter>engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\engine\TcpServer_Thread.cpp">
-      <Filter>engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\engine\TcpServer_Funs.cpp">
-      <Filter>engine</Filter>
     </ClCompile>
     <ClCompile Include="AppGlobal.cpp">
       <Filter>app</Filter>
@@ -43,15 +28,6 @@
     </ClCompile>
     <ClCompile Include="AppTest.cpp">
       <Filter>app</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\engine\TcpClient.cpp">
-      <Filter>engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\engine\TcpClient_Thread.cpp">
-      <Filter>engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\engine\TcpClient_Funs.cpp">
-      <Filter>engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,12 +66,6 @@
     <ClInclude Include="..\..\engine\IContainer.h">
       <Filter>engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\engine\IOPool.h">
-      <Filter>engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\engine\TcpServer.h">
-      <Filter>engine</Filter>
-    </ClInclude>
     <ClInclude Include="AppGlobal.h">
       <Filter>app</Filter>
     </ClInclude>
@@ -104,9 +74,6 @@
     </ClInclude>
     <ClInclude Include="AppTest.h">
       <Filter>app</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\engine\TcpClient.h">
-      <Filter>engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

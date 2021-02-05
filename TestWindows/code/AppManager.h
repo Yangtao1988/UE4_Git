@@ -2,7 +2,7 @@
 #define  __APPMANAGER_H
 
 #ifdef ____WIN32_
-//#pragma comment(lib,"libs/myengine.lib") 
+#pragma comment(lib,"libs/myengine.lib") 
 #endif
 
 namespace app
