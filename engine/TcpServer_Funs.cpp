@@ -44,7 +44,7 @@ namespace net
 		if (cindex == nullptr) return nullptr;
 		if (cindex->index < 0) return nullptr;
 
-		S_CLIENT_BASE* c = client(cindex->index);		//value 和 client！！！！！！！！！！！！！！！！！
+		auto c = Linkers->Value(cindex->index);		//由	S_CLIENT_BASE* c = client(cindex->index) 更改为： auto c = Linkers->Value(cindex->index)
 		if (c == nullptr)
 		{
 			LOG_MSG("Client c == null %d-%d line:%d\n", (int)socketfd, cindex->index, __LINE__);
