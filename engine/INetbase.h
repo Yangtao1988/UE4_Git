@@ -105,9 +105,9 @@ namespace net
 		u8              state;//用户状态 0空闲 1尝试连接 2安全连接  3连接成功
 		u8              rCode;
 
-		//客户端接收数据
-		char* recvBuf_Temp;
-		char* recvBuf;
+		//客户端接收数据		生产者接收数据
+		char*			recvBuf_Temp;
+		char*			recvBuf;
 		s32				recv_Head;//头 消费者使用
 		s32				recv_Tail;//尾 生产者使用
 		s32				recv_TempHead;//临时头
@@ -115,7 +115,7 @@ namespace net
 		bool			is_Recved;
 
 
-		//客户端发送数据
+		//客户端发送数据		消费者发送数据
 		char* sendBuf;
 		s32				send_Head;
 		s32				send_Tail;
@@ -221,10 +221,11 @@ namespace net
 #else
 		virtual int getSocket() = 0;
 #endif 
-		virtual void runClient(u32 sid, char* ip, int por) = 0;
+		virtual void runClient(u32 sid, char* ip, int port) = 0;
 		virtual bool connectServer() = 0;
 		virtual void disconnectServer(const s32 errcode, const char* err) = 0;
 
+		//封包
 		virtual void  begin(const u16 cmd) = 0;
 		virtual void  end() = 0;
 		virtual void  sss(const s8 v) = 0;
@@ -240,6 +241,7 @@ namespace net
 		virtual void  sss(const f64 v) = 0;
 		virtual void  sss(void* v, const u32 len) = 0;
 
+		//解包
 		virtual void  read(s8& v) = 0;
 		virtual void  read(u8& v) = 0;
 		virtual void  read(s16& v) = 0;

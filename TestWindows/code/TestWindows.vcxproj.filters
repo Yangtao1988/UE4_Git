@@ -44,6 +44,15 @@
     <ClCompile Include="AppTest.cpp">
       <Filter>app</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\engine\TcpClient.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\engine\TcpClient_Thread.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\engine\TcpClient_Funs.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="share">
@@ -96,8 +105,12 @@
     <ClInclude Include="AppTest.h">
       <Filter>app</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\engine\TcpClient.h">
+      <Filter>engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="..\exe\config_server.xml" />
+    <Xml Include="..\exe\config_client.xml" />
   </ItemGroup>
 </Project>
