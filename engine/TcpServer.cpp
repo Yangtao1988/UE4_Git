@@ -76,7 +76,7 @@ namespace net
 	}
 
 
-	//停止服务器
+	//停止服务器！！！！！！！！！！！！
 	void TcpServer::stopServer()
 	{
 		for (int i = 0; i < m_ThreadNum; i++)
@@ -519,15 +519,7 @@ namespace net
 			break;
 		}
 		
-		if (onDisconnectEvent != nullptr) this->onDisconnectEvent(this, c, kind);	//后3行为新增的！！！！！！！！！！！！！！
-
-		if (c != nullptr)
-		{
-			if (c->state == func::S_Connect || c->state == func::S_ConnectSecure)
-			{
-				c->Reset();
-			}
-		}
+		if (onDisconnectEvent != nullptr) this->onDisconnectEvent(this, c, kind);	
 
 		return 0;
 	}

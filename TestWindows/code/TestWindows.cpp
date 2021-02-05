@@ -1,12 +1,10 @@
 ﻿#include <iostream>
-#include "../../share/ShareFunction.h"
-#include <Windows.h>
+#include "AppManager.h"
 
 
 int main()
 {
 
-    share::InitData();
-    Sleep(10000);
+    app::run();
 
 }

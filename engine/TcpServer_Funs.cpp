@@ -86,9 +86,9 @@ namespace net
 	{
 		if (id < 0 || id >= Linkers->length) return false;
 		S_CLIENT_BASE* c = Linkers->Value(id);
-		if (c->state >= secure) return true;			//false 改为true！！！！！！！！课程为true
+		if (c->state >= secure) return false;			
 		shutDown(c->socketfd, 0, c, 2006);
-		return false;									//true改为false!!!!!!!!!!      课程为false
+		return true;								
 	}
 
 	//主线程下 解析命令
@@ -146,7 +146,7 @@ namespace net
 
 			if (c->state < func::S_Connect)
 			{
-				LOG_MSG("clinet已经reset....\n");
+				LOG_MSG("client已经reset....\n");
 				return;
 			}
 			//4、增加读取长度
