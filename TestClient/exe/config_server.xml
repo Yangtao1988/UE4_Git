@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GB2312"?>
+<root>
+    <server Port="13550"
+            ID="4001"
+            MaxUser="30"
+            MaxConnect="1000"
+            MaxAccpet="64"
+            MaxRece="100"
+            MaxSend="100"
+            CCode="130"
+            Version="20180408"
+            ReceOne="8"
+            ReceMax="256"
+            SendOne="8"
+            SendMax="256"
+            HeartTime="60"
+            AutoSave ="30"
+            SafeCode="testcode"
+            Head="DE"/>
+</root>
