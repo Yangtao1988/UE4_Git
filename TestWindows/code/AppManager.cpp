@@ -2,7 +2,9 @@
 #include "AppGlobal.h"
 #include <thread>
 #include "../../share/ShareFunction.h"
+
 #include "AppTest.h"
+#include "AppPlayer.h"
 
 
 namespace app
@@ -60,8 +62,14 @@ namespace app
 		__TcpServer->runServer(5);						//开辟线程数量,可以自由更改!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
+		//注册信息
 		__AppTest = new AppTest();
-		__TcpServer->registerCommand(1000, __AppTest);
+		__AppPlayer = new AppPlayer();
+		__TcpServer->registerCommand(CMD_LOGIN, __AppPlayer);
+		__TcpServer->registerCommand(CMD_MOVE, __AppPlayer);
+		__TcpServer->registerCommand(CMD_PLAYERDATA, __AppPlayer);
+
+
 
 
 		//Sleep(5000);				//测试停止服务器

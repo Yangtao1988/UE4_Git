@@ -7,6 +7,7 @@ namespace app
 	IContainer* __AppTest = nullptr;
 
 	//×Ö½Ú¶ÔÆë
+/*
 #pragma pack(push,packing)
 #pragma pack(1)
 	struct  testdata
@@ -36,7 +37,7 @@ namespace app
 		ts->sss(c->ID, &ttdata, sizeof(testdata));
 		ts->end(c->ID);
 
-	}
+	}*/
 
 
 
@@ -64,12 +65,12 @@ namespace app
 			return false;
 		}
 
-		switch (cmd)
+		/*switch (cmd)
 		{
 		case 1000:
 			ontestdata(ts, c);
 			break;
-		}
+		}*/
 
 		return true;			
 	}
