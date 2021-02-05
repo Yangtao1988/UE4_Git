@@ -300,7 +300,7 @@ namespace net
 		int ret = this->postRecv(acc->m_Socket);
 		if (ret != 0)
 		{
-			//deleteConnectIP(c->ip);
+			//deleteConnectIP(c->ip);			课程无！！！！！！！！！！！！
 			c->Reset();
 			return -6;
 		}
@@ -308,9 +308,9 @@ namespace net
 		//生成随机种子 发送一个安全码给客户端  随机加密码
 		srand(time(NULL));
 		u8 rcode = rand() % 125 + 1;
-		begin(c->ID, CMD_RCODE);
-		sss(c->ID, rcode);
-		end(c->ID);
+		this->begin(c->ID, CMD_RCODE);
+		this->sss(c->ID, rcode);
+		this->end(c->ID);
 		c->rCode = rcode;
 
 		updateConnect(true);
@@ -400,12 +400,13 @@ namespace net
 			c->recv_Tail = 0;
 			c->recv_Head = 0;
 		}
+
 		//buff缓冲区已满
 		if (c->recv_Tail + recvBytes > __ServerInfo->ReceMax) return -2;
 
 		memcpy(&c->recvBuf[c->recv_Tail], buf, recvBytes);
 		c->recv_Tail += recvBytes;
-		c->is_RecvCompleted = true;
+		//c->is_RecvCompleted = true;			课程无！！！！！！！！！！！！！！！！！
 		return 0;
 	}
 
@@ -423,19 +424,19 @@ namespace net
 		s32 sendBytes = c->send_Tail - c->send_Head;
 		if (sendBytes <= 0) return -4;
 		if (sendBytes > __ServerInfo->SendOne) sendBytes = __ServerInfo->SendOne;
-		//c->is_SendCompleted = false;
+		//c->is_SendCompleted = false;         课程无！！！！！！！！！！！！！！！！！！！！
 
 		SendContext* context = SendContext::pop();
 		context->setSend(c->socketfd, &c->sendBuf[c->send_Head], sendBytes);
 
 		unsigned long dwBytes = 0;
 		unsigned long err = WSASend(context->m_Socket,
-			&context->m_wsaBuf,
-			1,
-			&dwBytes,
-			0,
-			&context->m_OverLapped,
-			NULL);
+									&context->m_wsaBuf,
+									1,
+									&dwBytes,
+									0,
+									&(context->m_OverLapped),
+									NULL);
 
 		if (err == SOCKET_ERROR)
 		{
@@ -482,9 +483,9 @@ namespace net
 		}
 
 		//发送成功
-		//c->send_Head += sendBytes;
-		//c->is_SendCompleted = true;				课程无此3行
-		//SendContext::push(sc);
+		c->send_Head += sendBytes;
+		c->is_SendCompleted = true;				
+		SendContext::push(sc);
 		return 0;
 	}
 

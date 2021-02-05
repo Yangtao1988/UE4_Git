@@ -40,7 +40,7 @@ namespace net
 		if (cindex == nullptr) return nullptr;
 		if (cindex->index < 0) return nullptr;
 
-		S_CLIENT_BASE* c = client(cindex->index);
+		S_CLIENT_BASE* c = client(cindex->index);		//value 和 client！！！！！！！！！！！！！！！！！
 		if (c == nullptr)
 		{
 			LOG_MSG("Client c == null %d-%d line:%d\n", (int)socketfd, cindex->index, __LINE__);
@@ -56,7 +56,6 @@ namespace net
 
 	S_CLIENT_BASE* TcpServer::client(const int id)
 	{
-
 		if (id < 0 || id >= Linkers->length) return nullptr;
 		S_CLIENT_BASE* c = Linkers->Value(id);
 		return c;
@@ -337,7 +336,7 @@ namespace net
 		c->sendBuf[c->send_Tail + 4] = a[2];
 		c->sendBuf[c->send_Tail + 5] = a[3];
 		//最后结束赋值
-		c->send_Tail = c->send_TempTail;
+		c->send_Tail = c->send_TempTail;				
 	}
 
 
