@@ -133,13 +133,13 @@ namespace func
 	extern ConfigXML* __ServerInfo;
 	extern ConfigXML* __ClientInfo;
 	extern std::vector<ServerListXML*> __ServerListInfo;
-	//extern u8 GetServerType(s32 sid);
+	extern u8 GetServerType(s32 sid);
 	extern void(*MD5str)(char* output, unsigned char* input, int len);
 	extern bool InitData();
 
-	//extern const char* getShutDownError(int id);
-	//extern const char* getCloseSocketError(int id);
-	//extern void setConsoleColor(u16 index);
+	extern const char* getShutDownError(int id);
+	extern const char* getCloseSocketError(int id);
+	extern void setConsoleColor(u16 index);
 
 
 }

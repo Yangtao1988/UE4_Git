@@ -137,7 +137,7 @@ namespace net
 		virtual bool  isSecure_T(const s32 id, s32 secure);
 		virtual bool  isSecure_F_Close(const s32 id, s32 secure);
 		virtual void  parseCommand();
-		virtual void  getSecurityCount(int& connum, int& securtiynum);
+		virtual void  getSecurityCount(int& connum, int& securitynum);
 
 		//封装发送数据包
 		virtual void  begin(const int id, const u16 cmd);

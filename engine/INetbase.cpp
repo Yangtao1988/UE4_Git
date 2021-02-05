@@ -60,6 +60,8 @@ namespace func
 		else if (sid >= 5000 && sid < 6000) return func::S_TYPE_LOGIN;
 		return func::S_TYPE_USER;
 	}
+
+
 	const char* getShutDownError(int id)
 	{
 		switch (id)

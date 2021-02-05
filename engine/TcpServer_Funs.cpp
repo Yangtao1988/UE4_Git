@@ -14,6 +14,7 @@ namespace net
 {
 
 	//******************************************************************
+	//初始化指令
 	void  TcpServer::initCommands()
 	{
 		__Commands.reserve(MAX_COMMAND_LEN);
@@ -22,14 +23,17 @@ namespace net
 			__Commands.emplace_back(nullptr);
 		}
 	}
-	//注册
+
+	//注册指令
 	void  TcpServer::registerCommand(int cmd, void* container)
 	{
-		if (cmd >= MAX_COMMAND_LEN) return;
+		if (cmd >= MAX_COMMAND_LEN) return;				//课程无return!!!!!!!!!!!!!!!!!!!!!
 		IContainer* icon = (IContainer*)container;
 		if (icon == nullptr) return;
 		__Commands[cmd] = icon;
 	}
+
+
 	//******************************************************************
 
 	S_CLIENT_BASE* TcpServer::client(SOCKET socketfd, bool isseriuty)
@@ -82,15 +86,15 @@ namespace net
 	{
 		if (id < 0 || id >= Linkers->length) return false;
 		S_CLIENT_BASE* c = Linkers->Value(id);
-		if (c->state >= secure) return false;
+		if (c->state >= secure) return true;			//false 改为true！！！！！！！！课程为true
 		shutDown(c->socketfd, 0, c, 2006);
-		return true;
+		return false;									//true改为false!!!!!!!!!!      课程为false
 	}
 
 	//主线程下 解析命令
 	void TcpServer::parseCommand()
 	{
-		for (s32 i = 0; i < Linkers->length; i++)
+		for (int i = 0; i < Linkers->length; i++)
 		{
 			auto c = Linkers->Value(i);
 			if (c->ID == -1) continue;
@@ -105,10 +109,10 @@ namespace net
 	}
 
 
-	void TcpServer::getSecurityCount(int& connum, int& securtiynum)
+	void TcpServer::getSecurityCount(int& connum, int& securitynum)
 	{
 		connum = m_ConnectCount;
-		securtiynum = m_SecurityCount;
+		securitynum = m_SecurityCount;
 	}
 
 	//消费者 解析命令
@@ -149,14 +153,14 @@ namespace net
 			c->recv_Head += length;
 
 		}
-
-		c->is_RecvCompleted = false;            //课程无
+		//c->is_RecvCompleted = false;            //课程无!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	}
 
 	//解析详细头指令
 	void TcpServer::parseCommand(S_CLIENT_BASE* c, u16 cmd)
 	{
 		c->time_Heart = (int)time(NULL);
+
 		if (cmd < 65000)
 		{
 			if (cmd == CMD_HEART)
@@ -167,6 +171,7 @@ namespace net
 				begin(c->ID, CMD_HEART);
 				sss(c->ID, value);
 				end(c->ID);*/
+
 				return;
 				//LOG_MSG("recv CMD_HEART...%d \n", value);
 			}
@@ -251,7 +256,7 @@ namespace net
 			else if (temp > 5)
 			{
 				//LOG_MSG("安全关闭5秒...%d %d \n", c->is_RecvCompleted, c->is_SendCompleted);
-				closeSocket(c->socketfd, c, 2002);
+				closeSocket(c->socketfd, c, 2002);				
 			}
 			return;
 		}
@@ -696,7 +701,7 @@ namespace net
 		c->recv_TempHead += len;
 	}
 
-
+//*************************************************************************************
 	S_CLIENT_BASE* TcpServer::getFreeLinker()
 	{
 		std::lock_guard<std::mutex> guard(this->m_findlink_mutex);
