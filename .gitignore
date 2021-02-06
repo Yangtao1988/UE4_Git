@@ -8,6 +8,13 @@
 *.obj
 */.vs/
 */compiles/
+*.pdb
+*.idb
+*.tlog
+*.suo
+*.db
+*.ipch
+*.log
 
 # Precompiled Headers
 *.gch
@@ -17,6 +24,8 @@
 *.so
 *.dylib
 *.dll
+*.xml
+*.ilk
 
 # Fortran module files
 *.mod
