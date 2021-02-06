@@ -47,6 +47,12 @@ namespace app
 		{
 			c->Reset();
 		}
+		else if(c->state == func::S_Login)
+		{
+			c->state = func::S_NeedSave;
+			LOG_MSG("APPglobal leave...%d-%d \n", c->ID, (int)c->socketfd);
+		}
+
 	}
 
 	//工作线程

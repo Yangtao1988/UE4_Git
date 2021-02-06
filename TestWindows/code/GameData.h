@@ -32,10 +32,10 @@ namespace app
 		f32 z;
 	};
 
-	//玩家数据
+	//玩家基础数据
 	struct  S_PLAYER_BASE
 	{
-		s32  memid;
+		s32  memid;				//账号ID
 		s32  socketfd;
 		s32  state;
 		s32  curhp;

@@ -44,6 +44,7 @@ namespace app
 		if (__TcpServer == nullptr) return;
 
 		__TcpServer->parseCommand();
+		__AppPlayer->onUpdate();
 		printInfo();
 
 	}
@@ -68,11 +69,11 @@ namespace app
 		__TcpServer->registerCommand(CMD_LOGIN, __AppPlayer);
 		__TcpServer->registerCommand(CMD_MOVE, __AppPlayer);
 		__TcpServer->registerCommand(CMD_PLAYERDATA, __AppPlayer);
+		__TcpServer->registerCommand(9999, __AppPlayer);
 
 
 
-
-		//Sleep(5000);				//测试停止服务器
+		//Sleep(5000);					//测试停止服务器
 		//__TcpServer->stopServer();	//测试停止服务器
 		while (true)
 		{

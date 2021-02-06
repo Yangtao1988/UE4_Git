@@ -17,9 +17,9 @@ namespace app
 		virtual void  onInit();
 		virtual void  onUpdate();
 		virtual bool  onServerCommand(net::ITcpServer* ts, net::S_CLIENT_BASE* c, const u16 cmd);
-		virtual bool  OnDBCommand(void* buff);
+		//virtual bool  OnDBCommand(void* buff);
 
-		void onReigster(net::ITcpServer* ts, net::S_CLIENT_BASE* c);
+		//void onReigster(net::ITcpServer* ts, net::S_CLIENT_BASE* c);
 		void onLogin(net::ITcpServer* ts, net::S_CLIENT_BASE* c);
 		void onMove(net::ITcpServer* ts, net::S_CLIENT_BASE* c);
 		void onGetPlayerData(net::ITcpServer* ts, net::S_CLIENT_BASE* c);

@@ -14,6 +14,8 @@ namespace app
 		if (it != __AccountsName.end()) return it->second;
 		return nullptr;
 	}
+
+
 	S_USER_MEMBER_BASE* FindMember(int memid)
 	{
 		auto it = __AccountsID.find(memid);
