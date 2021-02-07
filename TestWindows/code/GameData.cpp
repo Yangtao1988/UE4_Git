@@ -8,7 +8,7 @@ namespace app
 	std::map<int, S_USER_MEMBER_BASE*>           __AccountsID;
 
 	//²éÕÒÕËºÅ
-	S_USER_MEMBER_BASE* FindMember(std::string name)
+	/*S_USER_MEMBER_BASE* FindMember(std::string name)
 	{
 		auto it = __AccountsName.find(name);
 		if (it != __AccountsName.end()) return it->second;
@@ -21,7 +21,7 @@ namespace app
 		auto it = __AccountsID.find(memid);
 		if (it != __AccountsID.end()) return it->second;
 		return nullptr;
-	}
+	}*/
 
 
 

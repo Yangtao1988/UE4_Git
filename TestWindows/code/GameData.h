@@ -85,8 +85,8 @@ namespace app
 
 	extern std::map<std::string, S_USER_MEMBER_BASE*>   __AccountsName;
 	extern std::map<int, S_USER_MEMBER_BASE*>           __AccountsID;
-	extern S_USER_MEMBER_BASE* FindMember(std::string name);
-	extern S_USER_MEMBER_BASE* FindMember(int memid);
+	/*extern S_USER_MEMBER_BASE* FindMember(std::string name);
+	extern S_USER_MEMBER_BASE* FindMember(int memid);*/
 
 
 
