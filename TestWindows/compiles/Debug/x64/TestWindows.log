@@ -1,1 +1,11 @@
-﻿
+﻿  AppPlayer.cpp
+D:\UE4Server\UE4_Git\TestWindows\code\GameData.h(58,53): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(55,13): warning C4244: 'initializing': conversion from 'u64' to 'int', possible loss of data
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(143,12): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 4 has type 'SOCKET'
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(143,12): message : consider using '%lld' in the format string
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(143,12): message : consider using '%Id' in the format string
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(143,12): message : consider using '%I64d' in the format string
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(179,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\UE4Server\UE4_Git\TestWindows\code\AppPlayer.cpp(183,23): warning C4244: '=': conversion from 'SOCKET' to 's32', possible loss of data
+  TestWindows.vcxproj -> D:\UE4Server\UE4_Git\TestWindows\exe\TestWindows.exe

@@ -44,7 +44,7 @@ namespace share
 
 		__ServerInfo->Port = atoi(xmlNode->Attribute("Port"));
 		__ServerInfo->ID = atoi(xmlNode->Attribute("ID"));
-		__ServerInfo->Type = 0;								//原来为1   ！！！！！！！！！！！！！！
+		__ServerInfo->Type = 1;								//原来为1   ！！！！！！！！！！！！！！后改为0
 		__ServerInfo->MaxPlayer = atoi(xmlNode->Attribute("MaxUser"));
 		__ServerInfo->MaxConnect = atoi(xmlNode->Attribute("MaxConnect"));
 		__ServerInfo->MaxAccpet = atoi(xmlNode->Attribute("MaxAccpet"));
