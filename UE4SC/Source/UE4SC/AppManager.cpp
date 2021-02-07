@@ -57,7 +57,7 @@ namespace app
 		func::__ClientInfo->SafeCode = "testcode";
 		func::__ClientInfo->Head[0] = 'D';
 		func::__ClientInfo->Head[1] = 'E';
-		func::__ClientInfo->RCode = 30;
+		func::__ClientInfo->RCode = 130;
 		func::__ClientInfo->Version = 20180408;
 		func::__ClientInfo->ReceOne = 8 * 1024;
 		func::__ClientInfo->ReceMax = 256 * 1024;

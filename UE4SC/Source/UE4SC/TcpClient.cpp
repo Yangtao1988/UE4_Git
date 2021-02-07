@@ -125,10 +125,7 @@ namespace net
 			socketfd->SetNonBlocking();
 			m_data.state = func::C_Connect;
 			m_data.time_HeartTime = 0;
-			if (onAcceptEvent != nullptr)
-			{
-				onAcceptEvent(this,0);
-			}
+			//if (onAcceptEvent != nullptr) onAcceptEvent(this,0);
 			return true;
 		}
 		return false;
@@ -142,7 +139,7 @@ namespace net
 		socketfd->Close();
 		m_data.reset();
 
-		if(onDisconnectEvent != nullptr) onDisconnectEvent(this,errcode);
+		if(onDisconnectEvent != nullptr) onDisconnectEvent(this,errcode);//非课程注释
 	}
 
 	//********************************************************************************************

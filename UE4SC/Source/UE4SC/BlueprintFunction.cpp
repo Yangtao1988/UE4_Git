@@ -1,6 +1,7 @@
 #include "BlueprintFunction.h"
 #include "AppManager.h"
 
+
 int32 UBlueprintFunction::AppUpdate()
 {
 	app::onUpdate();
@@ -93,6 +94,16 @@ FString UBlueprintFunction::read_FString_len(int32 len)
 	FString value = UTF8_TO_TCHAR(cc);
 	FMemory::Free(cc);
 	return value;
+}
+
+FPlayerBase UBlueprintFunction::read_PlayerBase()
+{
+	FPlayerBase data;
+	//已知字节类型数据接收
+	app::__TcpClient->read(&data,48);
+	//未知字节数据接收
+	data.nick = read_FString_len(20);
+	return data;
 }
 
 void UBlueprintFunction::send_begin(int32 cmd)

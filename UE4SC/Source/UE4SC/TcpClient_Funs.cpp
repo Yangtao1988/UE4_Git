@@ -72,8 +72,6 @@ namespace net
 
 			//4、增加读取长度
 			c->recv_Head += cl;
-
-			//printf("readdata : %d ..%d:%d.\n", c->State, c->Rece_B, c->Rece_E);
 		}
 
 		//3、发送数据
@@ -162,7 +160,7 @@ namespace net
 			return;
 		}
 
-		disconnectServer(6001, "b error...");
+		disconnectServer(6001, "connect server error...");
 	}
 
 
@@ -176,7 +174,7 @@ namespace net
 			c->send_TempTail > func::__ClientInfo->SendMax ||
 			c->send_Tail >= c->send_TempTail)
 		{
-			disconnectServer(6002, "e error...");
+			disconnectServer(6002, "connect server error...");
 			return;
 		}
 
