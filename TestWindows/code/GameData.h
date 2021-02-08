@@ -55,7 +55,7 @@ namespace app
 	{
 		inline bool IsT() const { return ID > 0; }
 		inline bool IsT_ID(const __int64 id) { return (ID == id); }
-		inline bool IsT_Name(const char* fname) { return (stricmp(name, fname) == 0); };
+		inline bool IsT_Name(const char* fname) { return (_stricmp(name, fname) == 0); };//加了_
 
 		E_MEMBER_STATE			state;      //账号状态
 		int					    ID;         //账号唯一标记 
@@ -87,14 +87,6 @@ namespace app
 	extern std::map<int, S_USER_MEMBER_BASE*>           __AccountsID;
 	/*extern S_USER_MEMBER_BASE* FindMember(std::string name);
 	extern S_USER_MEMBER_BASE* FindMember(int memid);*/
-
-
-
-
-
-
-
-
 
 }
 
